@@ -47,5 +47,5 @@
     cart.add('сок', 28, 5);
     cart.add('банан', 30, 4);
     cart.calculateItemPrice();
-    console.log(cart.print());
+    cart.print();
 }
