@@ -47,46 +47,18 @@
       if (сhoiceMan[0] === choiceComp[0]) {
         alert('Ничья');
       } else {
-        if (сhoiceMan[0] === rock) {
-          if (choiceComp[0] === scissors) {
-            alert(`Компьютер: ${choiceComp}
+        if (сhoiceMan[0] === rock && choiceComp[0] === scissors ||
+          сhoiceMan[0] === scissors && choiceComp[0] === paper ||
+          сhoiceMan[0] === paper && choiceComp[0] === rock) {
+          alert(`Компьютер: ${choiceComp}
             Вы: ${lang[0]}
             Вы выиграли!`);
-            result.player += 1;
-          } else {
-            alert(`Компьютер: ${choiceComp}
+          result.player += 1;
+        } else {
+          alert(`Компьютер: ${choiceComp}
             Вы: ${lang[0]}
             Вы проиграли!`);
-            result.computer += 1;
-          }
-        }
-
-        if (сhoiceMan[0] === scissors) {
-          if (choiceComp[0] === rock) {
-            alert(`Компьютер: ${choiceComp}
-            Вы: ${lang[1]}
-            Вы проиграли!`);
-            result.computer += 1;
-          } else {
-            alert(`Компьютер: ${choiceComp}
-            Вы: ${lang[1]}
-            Вы выиграли!`);
-            result.player += 1;
-          }
-        }
-
-        if (сhoiceMan[0] === paper) {
-          if (choiceComp[0] === rock) {
-            alert(`Компьютер: ${choiceComp}
-            Вы: ${lang[2]}
-            Вы выиграли!`);
-            result.player += 1;
-          } else {
-            alert(`Компьютер: ${choiceComp}
-            Вы: ${lang[2]}
-            Вы проиграли!`);
-            result.computer += 1;
-          }
+          result.computer += 1;
         }
       }
       return start();
